@@ -459,7 +459,7 @@ class PlacePickerState extends State<PlacePicker> {
               // [route]
             } else if (i == 1 && isOnStreet) {
               if (types.contains('route')) {
-                name += ", $shortName";
+                name = name! + ", $shortName";
               }
             } else {
               if (types.contains("sublocality_level_1")) {
@@ -531,7 +531,7 @@ class PlacePickerState extends State<PlacePicker> {
     }
 
     Location().getLocation().then((locationData) {
-      LatLng target = LatLng(locationData.latitude, locationData.longitude);
+      LatLng target = LatLng(locationData.latitude!, locationData.longitude!);
       moveToLocation(target);
     }).catchError((error) {
       // TODO: Handle the exception here
