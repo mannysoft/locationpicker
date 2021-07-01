@@ -50,7 +50,7 @@ class PlacePickerState extends State<PlacePicker> {
   /// Overlay to display autocomplete suggestions
   OverlayEntry? overlayEntry;
 
-  List<NearbyPlace> nearbyPlaces = List();
+  List<NearbyPlace> nearbyPlaces = [];
 
   /// Session token required for autocomplete API call
   String sessionToken = Uuid().generateV4();
